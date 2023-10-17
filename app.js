@@ -1,14 +1,16 @@
 const http = require("http");
 
 const server = http.createServer((req, res) => {
-
+// 작업단위를 하나의 트랜잭션이라 한다.
   console.log("URL로 최초접속하는 트랙잭션 확인하기");
-  console.log(req.url);
+  console.log(req.url); // "/""
+
   console.log("URL로 최초접속하는 요청 유형 확인하기");
-  console.log(req.method);
+  console.log(req.method); // GET
 
 });
 
 server.listen(3000, () => {
+  // 서버가동시 나오는 문구
   console.log('server running = http://localhost:3000/')
 })
